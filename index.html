@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div id="logo" class="logo">Afzal <b>.</b></div>
+            <ul class="navItems">
+                <li><a href="#">Home</a></li>
+                <li><a class="nav-link active" href="#about">About</a></li>
+                <li><a href="#skills">Skill</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/afzal-ali-0ba6a31b2/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/afz_013_/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/mdafzalali" target="_blank"><i class="fa-brands fa-github"></i></a>
+
+                <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+            </div>
+        </nav>
+
+        <script>
+            let prevScrollPos = window.pageYOffset;
+
+            window.onscroll = function() {
+                let currentScrollPos = window.pageYOffset;
+                if (prevScrollPos > currentScrollPos) {
+                    document.querySelector("nav").style.top = "0";
+                } else {
+                    document.querySelector("nav").style.top = "-80px"; // Adjust as needed
+                }
+                prevScrollPos = currentScrollPos;
+            }
+        </script>
+        <div class="wrapper">
+            <div class="cols cols0">
+                <span class="topline">Hello</span>
+                <h1>I'm <span class="multiText"></span></h1>
+                <p>I'm Student of MCA from Chandigarh University Mohali, Punjab. I belong to begusarai, Biahr</p>
+                <div class="btns">
+                    <a href="21MCA2574_MD AFZAL ALI.pdf" download><button>Download CV</button></a>
+                    <button>Hire me</button>
+                </div>
+            </div>
+            <div class="cols cols1">
+                <div class="imgbox">
+                    <img src="./img/image-2.png" id="splash">
+                    <img src="./img/afzal-image.png">
+
+                </div>
+            </div>
+        </div>
+        <!-- <hr> -->
+    </div>
+
+    <!--===== ABOUT =====-->
+    <section class="about section " id="about">
+        <h2 class="section-title">About</h2>
+
+        <div class="about__container bd-grid">
+            <div class="about__img">
+                <img src="img/about.png" alt="">
+            </div>
+
+            <div>
+                <h2 class="about__subtitle">I'am Coding Master</h2>
+                <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Add this section after the "About Me" section -->
+    <div class="skills" id="skills">
+
+        <h2 id="skill-text">Skills</h2>
+        <div class="skill-icons">
+            <img src="./img/Python.png" alt="Python">
+            <img src="./img/sql.png" alt="SQL">
+            <img src="./img/php.png" alt="PHP">
+            <!-- <img src="./img/html.png" alt="PHP"> -->
+            <!-- Add more skill images as needed -->
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12">
+    </script>
+    <script>
+        var typingEffect = new Typed(".multiText", {
+            strings: ["Software Developer", "Graphics Designer"],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 80,
+            backDelay: 1500
+        })
+    </script>
+
+
+
+</body>
+
+</html>
